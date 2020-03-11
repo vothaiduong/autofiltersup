@@ -10,7 +10,7 @@ function fillForm() {
 	var email = window.document.querySelectorAll('input[type=email]:not([type="hidden"]');
 	console.log(email)
 	for (var i=0; i<email.length;i++){
-		email[i].value = 'vothaiduong1991@gmail.com'
+		email[i].value = 'japanpromise@gmail.com'
 	}
 
 	var tel = window.document.querySelectorAll('input[type=tel]:not([type="hidden"]');
@@ -20,21 +20,26 @@ function fillForm() {
 	}
 
 	var radiosArea = window.document.getElementsByName('area');
-	console.log(radiosArea)
+	console.log('By area',radiosArea)
 	if (radiosArea.length) {
 		radiosArea[3].checked = true
 	}
 
 	var radiosLocation = window.document.getElementsByName('location');
-	console.log(radiosLocation)
+	console.log('By location', radiosLocation)
 	if (radiosLocation.length) {
 		radiosLocation[3].checked = true
 	}
 
-	var classFormRadio = document.getElementsByClassName("form-radio")[0].querySelectorAll("input");
-	console.log(classFormRadio)
-	if (classFormRadio.length) {
-		classFormRadio[3].checked = true
+
+	var classFormRadio = document.getElementsByClassName("form-radio")[0]
+	console.log('dung class tim radio', classFormRadio)
+	if (classFormRadio) {
+		var listRadio = classFormRadio.querySelectorAll("input");
+		console.log(listRadio)
+		if (listRadio.length) {
+			listRadio[3].checked = true
+		}
 	}
 
 	var checkBoxAree = window.document.getElementsByName('agree');
