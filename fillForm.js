@@ -10,7 +10,7 @@ function fillForm() {
 	var email = window.document.querySelectorAll('input[type=email]:not([type="hidden"]');
 	console.log(email)
 	for (var i=0; i<email.length;i++){
-		email[i].value = 'japanpromise@gmail.com'
+		email[i].value = 'vothaiduong1991@gmail.com'
 	}
 
 	var tel = window.document.querySelectorAll('input[type=tel]:not([type="hidden"]');
@@ -66,22 +66,24 @@ function fillForm() {
 		checkBoxAree[i].checked = true
 	}
 
-	var btnCommit = window.document.getElementsByName("commit");
-	console.log(btnCommit)
-	if (btnCommit) {
-		console.log(2222)
-		setTimeout(() => {
-			console.log(3333)
-			btnCommit[0].click()
-			console.log(44444)
-		}, 20)
-	}
+	if (name.length && email.length && tel.length) {
+		var btnCommit = window.document.getElementsByName("commit");
+		console.log(btnCommit)
+		if (btnCommit) {
+			console.log(2222)
+			setTimeout(() => {
+				console.log(3333)
+				btnCommit[0].click()
+				console.log(44444)
+			}, 20)
+		}
 
-	var button = document.getElementById("commit");
-	var myfunc = function(){
-		console.log('Click duoc roi nhe')
+		var button = document.getElementById("commit");
+		var myfunc = function(){
+			console.log('Click duoc roi nhe')
+		}
+		button.addEventListener("click",myfunc);
 	}
-	button.addEventListener("click",myfunc);
 }
 
 chrome.runtime.sendMessage({
