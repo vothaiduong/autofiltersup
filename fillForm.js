@@ -23,12 +23,24 @@ function fillForm() {
 	console.log('By area',radiosArea)
 	if (radiosArea.length) {
 		radiosArea[3].checked = true
+		for (var i=0; i<radiosArea.length;i++){
+			if (radiosArea[i].value === 'fukuoka') {
+				console.log('fukuoka')
+				radiosArea[i].checked = true
+			}
+		}
 	}
 
 	var radiosLocation = window.document.getElementsByName('location');
 	console.log('By location', radiosLocation)
 	if (radiosLocation.length) {
 		radiosLocation[3].checked = true
+		for (var i=0; i<radiosLocation.length;i++){
+			if (radiosLocation[i].value === 'fukuoka') {
+				console.log('fukuoka')
+				radiosLocation[i].checked = true
+			}
+		}
 	}
 
 
@@ -39,6 +51,12 @@ function fillForm() {
 		console.log(listRadio)
 		if (listRadio.length) {
 			listRadio[3].checked = true
+			for (var i=0; i<listRadio.length;i++){
+				if (listRadio[i].value === 'fukuoka') {
+					console.log('fukuoka')
+					listRadio[i].checked = true
+				}
+			}
 		}
 	}
 
