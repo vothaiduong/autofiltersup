@@ -44,7 +44,7 @@ function fillForm() {
 	}
 
 
-	var classFormRadio = document.getElementsByClassName("form-radio")[0]
+	var classFormRadio = window.document.getElementsByClassName("form-radio")[0]
 	console.log('dung class tim radio', classFormRadio)
 	if (classFormRadio) {
 		var listRadio = classFormRadio.querySelectorAll("input");
@@ -78,7 +78,7 @@ function fillForm() {
 			}, 20)
 		}
 
-		var button = document.getElementById("commit");
+		var button = window.document.getElementById("commit");
 		var myfunc = function(){
 			console.log('Click duoc roi nhe')
 		}
