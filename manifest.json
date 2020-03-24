@@ -1,11 +1,27 @@
 {
-  "name": "Simple form filler",
+  "name": "Filter Windyfairy",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "Simple form filler",
+  "description": "Windyfairy",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "<all_urls>"]
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "run_at" :"document_start",
+      "matches": ["<all_urls>"],
+      "js": ["background.js","script.js","moment.js","jquery-2.1.4.min.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "management"
+  ]
 }
