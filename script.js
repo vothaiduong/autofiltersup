@@ -19,6 +19,10 @@ function contentLoaded() {
         if (inputList[i].placeholder === 'your name') {
             inputList[i].value = 'VO THAI DUONG'
         }
+
+        if (inputList[i].placeholder === 'email') {
+            inputList[i].value = 'vothaiduong1991@gmail.com'
+        }
     }
 
     var radioLocation = window.document.getElementById('area_fukuoka');
@@ -40,8 +44,7 @@ function contentLoaded() {
                 console.log(btnCommit)
                 if (btnCommit && btnCommit[0].value == 'Continue') {
                     setTimeout(() => {
-                        alert('got em')
-                        // btnCommit[0].click()
+                        btnCommit[0].click()
                     }, 50)
                 }
                 break;
@@ -62,8 +65,7 @@ function contentLoaded() {
                     var btnCommit = window.document.getElementsByName("commit");
                     if (btnCommit && btnCommit[0].value == 'Continue') {
                         setTimeout(() => {
-                            alert('got em')
-                            // btnCommit[0].click()
+                            btnCommit[0].click()
                         }, 50)
                     }
                 }
